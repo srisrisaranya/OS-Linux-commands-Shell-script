@@ -1,4 +1,4 @@
-# OS-Linux-commands-Shell-scripting
+ # OS-Linux-commands-Shell-scripting
 Operating systems Lab exercise
 # Linux commands-Shell scripting
 Linux commands-Shell scripting
@@ -42,20 +42,18 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
-
+![alt text](/op-img/file1.png)
 
 cat < file2
 ## OUTPUT
 
+![alt text](/op-img/file2.png)
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
-comm file1 file2
- ## OUTPUT
 
+![alt text](/op-img/cmp1.png)
  
 diff file1 file2
 ## OUTPUT
@@ -83,17 +81,18 @@ cat > file22
 cut -c1-3 file11
 ## OUTPUT
 
-
+![alt text](op-img/cut.png)
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
 
-
+![alt text](op-img/cut_1.png)
 
 cut -d "|" -f 2 file22
 ## OUTPUT
 
+![alt text](op-img/cut_2.png)
 
 cat < newfile 
 ```
@@ -108,39 +107,37 @@ hello world
 grep Hello newfile 
 ## OUTPUT
 
-
+![alt text](op-img/grep_hello.png)
 
 grep hello newfile 
 ## OUTPUT
 
-
-
+![alt text](op-img/grep_hello_1.png)
 
 grep -v hello newfile 
 ## OUTPUT
 
-
+![alt text](op-img/grep_-v.png)
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
-
-
+![alt text](op-img/grep_-i.png)
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
-
-
+![alt text](op-img/grep_-i_-c.png)
 
 grep -R ubuntu /etc
 ## OUTPUT
 
-
+![alt text](op-img/grep-R_1.png)
 
 grep -w -n world newfile   
 ## OUTPUT
 
+![alt text](<op-img/grep -w -n.png>)
 
 cat < newfile 
 ```
@@ -164,59 +161,62 @@ Linux is best in this World
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
 
-
+![alt text](<op-img/egrep -w.png>)
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
-
+![alt text](<op-img/egrep -w_1.png>)
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
 
-
-
+![alt text](<op-img/egrep -w_2.png>)
 
 egrep '(^hello)' newfile 
 ## OUTPUT
 
-
+![alt text](op-img/egrep_3.png)
 
 egrep '(world$)' newfile 
 ## OUTPUT
 
-
+![alt text](op-img/egrep_4.png)
 
 egrep '(World$)' newfile 
 ## OUTPUT
 
+![alt text](op-img/egrep_5.png)
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
-
+![alt text](op-img/grep_6.png)
 
 egrep '[1-9]' newfile 
 ## OUTPUT
 
-
+![alt text](op-img/grep_7.png)
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
 
+![alt text](op-img/egrep_8.png)
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
 
+![alt text](op-img/egrep_9.png)
 
 egrep l{2} newfile
 ## OUTPUT
 
-
+![alt text](op-img/egrep_10.png)
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
 
+![alt text](op-img/egrep_11.png)
 
 cat > file23
 ```
@@ -231,54 +231,52 @@ cat > file23
 ^d
 ```
 
-
 sed -n -e '3p' file23
 ## OUTPUT
 
-
+![alt text](<op-img/sed -n.png>)
 
 sed -n -e '$p' file23
 ## OUTPUT
 
-
+![alt text](<op-img/sed -n_1.png>)
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
 
-
+![alt text](<op-img/sed -e.png>)
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
-
+![alt text](<op-img/sed -e.png>)
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
-
+![alt text](op-img/sed_1.png)
 
 sed -n -e '1,5p' file23
 ## OUTPUT
 
-
+![alt text](op-img/sed_2.png)
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
-
-
+![alt text](op-img/sed_3.png)
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
 
-
+![alt text](op-img/sed_4.png)
 
 seq 10 
 ## OUTPUT
 
+![alt text](op-img/seq.png)'4,6p'
 
-
-seq 10 | sed -n '4,6p'
+seq 10 | sed -n 
 ## OUTPUT
 
 
@@ -286,28 +284,29 @@ seq 10 | sed -n '4,6p'
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 
-
+![alt text](op-img/seq_2.png)
 
 seq 3 | sed '2a hello'
 ## OUTPUT
 
-
+![alt text](op-img/seq_3.png)
 
 seq 2 | sed '2i hello'
 ## OUTPUT
 
+![alt text](op-img/seq_4.png)
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
 
+![alt text](op-img/seq_5.png)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
 
-
+![alt text](<op-img/sed -n_2.png>)
 
 sed -n '2,4{s/$/*/;p}' file23
-
 
 #Sorting File content
 cat > file21
@@ -321,6 +320,7 @@ cat > file21
 sort file21
 ## OUTPUT
 
+![alt text](op-img/sort.png)
 
 cat > file22
 ```
@@ -332,13 +332,10 @@ cat > file22
 1004 | Sit |  7000 | Dev
 ``` 
 uniq file22
-## OUTPUT
-
-
 
 #Using tr command
-
 cat file23 | tr [:lower:] [:upper:]
+
  ## OUTPUT
 
 cat < urllist.txt
@@ -1085,7 +1082,10 @@ else
 fi
 ```
 ## OUTPUT 
+![image](https://github.com/HareeshrajaR/OS-Linux-commands-Shell-script/assets/144870459/4c86ecae-a50d-4a9d-8146-78ad4d1d4a20)
 
 
 # RESULT:
 The Commands are executed successfully.
+
+
